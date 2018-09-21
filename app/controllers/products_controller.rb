@@ -9,7 +9,6 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     respond_to do |format|
-      # format.html { products_path }
       format.js {render layout: false}
     end
   end
@@ -21,8 +20,10 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
+      flash[:succes] = "Product successfully created."
       redirect_to '/'
     else
+      flash[:danger] = "Product not created. Please check form."
       render :new
     end
   end
@@ -33,8 +34,13 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    @product.update(product_params)
-    redirect_to products_path
+    if @product.update(product_params)
+      flash[:success] = "Product successfully updated"
+      redirect_to products_path
+    else
+      flash[:danger] = "Product not updated."
+      redirect_to edit_product_path(@product)
+    end
   end
 
   def destroy
@@ -44,6 +50,7 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_path }
       format.js
     end
+    flash[:succes] = "Product has been removed."
   end
 
   private

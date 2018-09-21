@@ -1,0 +1,4 @@
+$('.product<%=@product.id%>_card').fadeOut()
+$('.flash').html('<%= j render("layouts/flash") %>')
+$('.flash').fadeOut(1500)
+<% flash.clear %>

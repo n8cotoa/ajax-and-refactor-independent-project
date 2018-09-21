@@ -25,3 +25,4 @@ To set up:
 1. Add validations to product, add image column to products table
 1. Add edit and delete for products for admin users, edit is currently broken because product price field does not take decimals.
 1. Allow for product price to be other than whole number amounts, forms for new and edit products now work with decimals.
+1. Add flash message for creating, updating, and deleting products for admin.
