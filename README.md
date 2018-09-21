@@ -13,4 +13,6 @@ To set up:
 ### Contributions
 
 1. Add Ajax to products#index page to take form input and update cart without refresh.
-1. Product details are hidden and can be displayed using Ajax by clicking on details in the product card. 
+1. Product details are hidden and can be displayed using Ajax by clicking on details in the product card.
+1. Cart item deletion is handled through Ajax now, cart item total and cart price total are updated as well through Ajax.
+1. Add validation for quantity field, input must be greater than zero
