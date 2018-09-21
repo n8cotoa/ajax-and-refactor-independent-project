@@ -4,6 +4,12 @@ E-commerce site. Uses `bcrypt` and `materialize`. There's a seed file. Set up yo
 
 To set up:
 
-* `rake db:setup`
+* Clone to your machine
+* Run 'Bundle install' in terminal in the project directory
+* Run 'rails db:create'
+* Run 'rails db:migrate'
+* Run 'rails db:seed' to populate database with fake data
 
-* Sorry, didn't get around to tests. It mostly works. There might be a few bugs.
+### Contributions
+
+1. Add Ajax to products#index page to take form input and update cart without refresh.
