@@ -5,6 +5,7 @@
   <% @products.each do |product| %>
     <div class="col s4">
       <h4><%= product.name %></h4>
+      <p><% if current_user != nil && current_user.admin %><%= link_to "Edit", edit_product_path(product)%> | <%= link_to 'Delete', product_path(product), :data => { :method => 'delete'} %><%end%></p>
       <p><%= number_to_currency product.price %></p>
       <%= link_to 'Details', product_path(product), remote: true %>
       <div id="product<%=product.id%>_details" style='display:none;'>

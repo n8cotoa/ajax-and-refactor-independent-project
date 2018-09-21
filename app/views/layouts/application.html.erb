@@ -9,6 +9,12 @@
   </head>
   <nav>
     <div class="nav-wrapper">
+      <% if current_user != nil && current_user.admin %>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li>Admin:</li>
+        <li><%= link_to 'New Product', new_product_path %></li>
+      </ul>
+      <% end %>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li id="cart_items"><%= render('layouts/cart_total') %></li>
         <li><%= link_to "See all products", products_path %></li>
