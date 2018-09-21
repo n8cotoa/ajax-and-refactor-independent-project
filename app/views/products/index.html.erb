@@ -8,6 +8,7 @@
       <p><%= number_to_currency product.price %></p>
       <%= link_to 'Details', product_path(product), remote: true %>
       <div id="product<%=product.id%>_details" style='display:none;'>
+        <%= image_tag product.image, class: 'product_image' %>
         <p><%= product.description %></p>
       </div>
       <%= form_for @order_item, remote: true do |f| %>
