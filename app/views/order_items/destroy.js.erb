@@ -1,0 +1,3 @@
+$('#item<%=@item.id%>_delete').slideUp()
+$('#cart_total').html('Your Total: <%= number_to_currency current_order.total_price %>')
+$('#cart_items').html('<%= j render("layouts/cart_total") %>')
