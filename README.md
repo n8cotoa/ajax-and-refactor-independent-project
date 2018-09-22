@@ -4,7 +4,7 @@
 
 ### Desciption
 
-E-commerce site. Uses `bcrypt` and `materialize`. There's a seed file. Set up your own admin. If you have questions, I'll be in Bali with no email. Ask someone else.
+E-commerce site. Uses `bcrypt` and `materialize`.
 
 ### Set Up and Installation
 
@@ -16,6 +16,12 @@ To set up:
 * Run 'rails db:migrate'
 * Run 'rails db:seed' to populate database with fake data
 * Run 'rails s' to start the server and go to localhost:3000 in your preferred browser
+
+To access admin permissions:
+
+* Run 'rails c' to bring up rails console
+* Type 'User.create(name: "name", email: "whatever@email.com", password: "yourpassword", admin: true)' and hit enter
+* Log into the local site using the account created in the console
 
 ### Contributions
 
