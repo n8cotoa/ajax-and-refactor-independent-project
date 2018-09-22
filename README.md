@@ -1,6 +1,12 @@
-# README
+# E-Commerce Upgrade and Refactoring project
+
+## by Nate Cottle
+
+### Desciption
 
 E-commerce site. Uses `bcrypt` and `materialize`. There's a seed file. Set up your own admin. If you have questions, I'll be in Bali with no email. Ask someone else.
+
+### Set Up and Installation
 
 To set up:
 
@@ -9,6 +15,7 @@ To set up:
 * Run 'rails db:create'
 * Run 'rails db:migrate'
 * Run 'rails db:seed' to populate database with fake data
+* Run 'rails s' to start the server and go to localhost:3000 in your preferred browser
 
 ### Contributions
 
@@ -17,6 +24,7 @@ To set up:
 1. Add Ajax to products#index page to take form input and update cart without refresh.
 1. Product details are hidden and can be displayed using Ajax by clicking on details in the product card.
 1. Cart item deletion is handled through Ajax now, cart item total and cart price total are updated as well through Ajax.
+1. Product deletion on admin side is handled through Ajax
 
 #### Refactoring
 
